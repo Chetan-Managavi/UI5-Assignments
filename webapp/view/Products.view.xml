@@ -1,0 +1,29 @@
+<mvc:View
+	controllerName="com.northwind.northwind.controller.Products"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+<Page title="Northwind Products">
+
+	 <List items="{northwind_json>/Products}">
+            <!-- <ObjectListItem title="{northwind_json>CompanyName}"/> -->
+            <ObjectListItem 
+                title="{northwind_json>ProductName}"
+                 number="{northwind_json>UnitPrice}"
+                 numberUnit="EUR" 
+                numberState="{=${northwind_json>UnitPrice} > 90 ? 'Warning': 'Success'}"
+				type="Navigation"
+				press=".onproductitempress"
+				/>
+        </List>
+
+		
+    
+
+
+</Page>
+</mvc:View>

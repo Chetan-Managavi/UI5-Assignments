@@ -1,0 +1,31 @@
+<mvc:View
+    controllerName="com.northwind.northwind.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+       
+
+        <VBox alignItems="Center">
+        
+            <Label id="idemaillabel" labelFor="idemail" text="Verify Email"/>
+            
+            <HBox >
+            <Input id='idemail' type="Email"/> 
+            <Text text="" id="idverifystatus"/>
+            </HBox>
+
+            <Button text="Verify" press="onVerifyButtonPress"/>
+
+        </VBox>
+       
+       
+        <!-- <List items="{north>/Products}">
+            <StandardListItem title="{north>ProductName}"/>
+        </List> -->
+    </Page>
+</mvc:View>

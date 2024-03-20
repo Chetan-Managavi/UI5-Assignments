@@ -1,0 +1,62 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+>
+
+<Dialog title="Purchase Item" contentHeight="70%" contentWidth="50%">
+    
+    <VBox  justifyContent="Center" alignContent="Center" >
+    
+        <HBox alignContent="Center" >
+        <Title text="Product Name" class="sapUiTinyMargin"></Title>
+        <Text text="{productitem>/ProductName}" class="sapUiTinyMargin"></Text>
+        </HBox>
+
+        <HBox alignContent="Center" >
+        <Title text="Available Quantity" class="sapUiTinyMargin"></Title>
+        <Text text="{productitem>/UnitsInStock}" class="sapUiTinyMargin"></Text>
+        </HBox>
+        
+        <HBox alignContent="Center" >
+        <Title text="Unit Price" class="sapUiTinyMargin"></Title>
+        <Text text="{productitem>/UnitPrice}" class="sapUiTinyMargin"></Text>
+        </HBox>
+
+        <HBox alignContent="Center" >
+        <Title text="Select Quantity" class="sapUiTinyMargin"></Title>
+        <Input type="Number" value="{productitem>/selectedqty}"  class="sapUiTinyMargin"></Input>
+        </HBox>
+
+        <HBox alignContent="Center" >
+        <Title text="Select Discount Coupons" class="sapUiTinyMargin"></Title>
+        <Select  change="onselectdiscount">
+            <c:ListItem
+                text="DISCOUNT10"
+                key="10"
+            >                
+            </c:ListItem>
+            <c:ListItem
+                text="DISCOUNT20"
+                key="20"
+            >                
+            </c:ListItem>
+            <c:ListItem
+                text="DISCOUNT30"
+                key="30"
+            >                
+            </c:ListItem>
+        </Select>
+        </HBox>
+
+        <HBox alignContent="Center" >
+        <Title text="Total Price" class="sapUiTinyMargin"></Title>
+        <Text text="{productitem>/totalprice}" class="sapUiTinyMargin"></Text>
+        </HBox>
+
+
+    
+    </VBox>
+
+
+</Dialog>
+</c:FragmentDefinition>

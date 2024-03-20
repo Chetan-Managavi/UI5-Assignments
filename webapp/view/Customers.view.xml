@@ -1,0 +1,21 @@
+<mvc:View
+	controllerName="com.northwind.northwind.controller.Customers"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+<Page title="Northwind Customers">
+
+	 <List items="{northwind_json>/Customers}">
+            <StandardListItem title="{northwind_json>CompanyName}"/>
+        </List>
+
+		
+    
+
+
+</Page>
+</mvc:View>
