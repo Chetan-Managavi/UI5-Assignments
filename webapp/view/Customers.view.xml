@@ -7,15 +7,13 @@
 	height="100%"
 	busyIndicatorDelay="0"
 >
-<Page title="Northwind Customers">
+	<Page title="Northwind Customers" >
 
-	 <List items="{northwind_json>/Customers}">
-            <StandardListItem title="{northwind_json>CompanyName}"/>
-        </List>
-
-		
-    
-
-
-</Page>
+		<headerContent>
+			<Button text="Question 4" press="navtoq4"></Button>
+		</headerContent>
+		<List items="{northwind_json>/Customers}">
+			<StandardListItem title="{northwind_json>CompanyName}" />
+		</List>
+	</Page>
 </mvc:View>

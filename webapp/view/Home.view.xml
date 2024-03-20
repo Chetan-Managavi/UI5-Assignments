@@ -8,6 +8,10 @@
         id="page"
         title="{i18n>title}"
     >
+
+    <headerContent>
+        <Button text="Question 2" press=".navtoq2" ></Button>
+    </headerContent>
        
 
         <VBox alignItems="Center">
@@ -24,8 +28,5 @@
         </VBox>
        
        
-        <!-- <List items="{north>/Products}">
-            <StandardListItem title="{north>ProductName}"/>
-        </List> -->
     </Page>
 </mvc:View>

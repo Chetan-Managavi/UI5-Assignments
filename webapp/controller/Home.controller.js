@@ -8,28 +8,17 @@ sap.ui.define(
 
     return Controller.extend("com.northwind.northwind.controller.Home", {
       onInit: function () {
-        // const omodel = this.getOwnerComponent().getModel("north");
-        const omodel = this.getOwnerComponent().getModel("northwind_xml");
-        omodel.setHeaders({ Accept: "application/xml" });
-
-        console.log(omodel, "omodel");
+        const omodel = this.getOwnerComponent().getModel("northwind_json");
 
         omodel.read("/Products", {
           success: function (data, res) {
-            console.log(data, omodel.getProperty("/Products(1)"), "ddd", "ppp");
-
-            //not recomended
-            console.log(data.results[0], "not recomended");
+            console.log(data)
           },
 
           error: (err) => {
             console.log(err, "err");
           },
         });
-
-        // console.log(omodel.getProperty("north>/Products(1)/ProductName"),"myst")
-
-        debugger;
       },
 
       onVerifyButtonPress: function () {
@@ -38,12 +27,17 @@ sap.ui.define(
 
         const regex = /.+@.+\..+/;
         if (regex.test(email)) {
-          verifystatus.setText("Verified");
+          verifystatus.removeStyleClass("notverify");
           verifystatus.addStyleClass("verify");
+          verifystatus.setText("Verified");
         } else {
-          verifystatus.setText("Invalid Format");
+          verifystatus.removeStyleClass("verify");
           verifystatus.addStyleClass("notverify");
+          verifystatus.setText("Invalid Format");
         }
+      },
+      navtoq2: function () {
+        this.getOwnerComponent().getRouter().navTo("Customers");
       },
     });
   }

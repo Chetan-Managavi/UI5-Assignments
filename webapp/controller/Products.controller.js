@@ -9,16 +9,11 @@ sap.ui.define(
        */
       onInit: function () {
         const omodel = this.getOwnerComponent().getModel("northwind_json");
-        console.log(omodel, "omodel");
+
 
         omodel.read("/Products", {
           success: function (data) {
-            console.log(
-              data,
-              omodel.getProperty("/Customers(1)"),
-              "ddd",
-              "ppp"
-            );
+            console.log(data)
           },
 
           error: (err) => {
@@ -38,8 +33,10 @@ sap.ui.define(
         this.getView().setModel(productitemmodel, "productitem");
         productitemmodel.setProperty("/selectedqty", 1);
 
-        
-        productitemmodel.setProperty("/totalprice", data.UnitPrice-data.UnitPrice*0.1)
+        productitemmodel.setProperty(
+          "/totalprice",
+          data.UnitPrice - data.UnitPrice * 0.1
+        );
 
         if (!this.dialog) {
           this.dialog = this.loadFragment({
@@ -47,34 +44,32 @@ sap.ui.define(
             id: "purchase-frag",
             type: "XML",
           });
-
-          this.dialog
-            .then((dialog) => dialog.open())
-            .catch((err) => console.log(err));
         }
 
-        console.log("data", data);
-
-        
+          this.dialog
+            .then((dialog) => {
+              dialog.open();
+            })
+            .catch((err) => console.log(err, "error in dialog"));
         
 
 
       },
-      onselectdiscount:function(event)
-      {
-
-        const discount= event.getParameter("selectedItem").getKey();
-        const productitemmodel= this.getView().getModel("productitem")
-        const data=productitemmodel.getData();
-        const totalprice= data.UnitPrice*data.selectedqty- data.UnitPrice*data.selectedqty*discount/100
-        productitemmodel.setProperty("/totalprice", totalprice)
-
-      }
-      
-
-
-
-
+      closedialog:function(){
+        this.dialog.then((dialog)=>dialog.close())
+      },
+      onselectdiscount: function (event) {
+        const discount = event.getParameter("selectedItem").getKey();
+        const productitemmodel = this.getView().getModel("productitem");
+        const data = productitemmodel.getData();
+        const totalprice =
+          data.UnitPrice * data.selectedqty -
+          (data.UnitPrice * data.selectedqty * discount) / 100;
+        productitemmodel.setProperty("/totalprice", totalprice);
+      },
+      navtoq6: function () {
+        this.getOwnerComponent().getRouter().navTo("Sales");
+      },
 
     });
   }

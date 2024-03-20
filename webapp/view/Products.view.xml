@@ -9,6 +9,10 @@
 >
 <Page title="Northwind Products">
 
+	<headerContent>
+		<Button text="Question 6" press=".navtoq6"/>
+	</headerContent>
+
 	 <List items="{northwind_json>/Products}">
             <!-- <ObjectListItem title="{northwind_json>CompanyName}"/> -->
             <ObjectListItem 

@@ -125,6 +125,11 @@
           "name":"Products",
           "pattern": "Products",
           "target":"Products"
+        },
+        {
+          "name":"Sales",
+          "pattern": "Sales",
+          "target": "Sales"
         }
 
       ],
@@ -146,6 +151,12 @@
 
           "viewId": "Products",
           "viewName": "Products",
+          "viewType": "XML"
+        },
+        "Sales":{
+
+          "viewId": "Sales",
+          "viewName": "Sales",
           "viewType": "XML"
         }
       }

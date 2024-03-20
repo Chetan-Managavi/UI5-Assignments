@@ -1,3 +1,4 @@
+
 <c:FragmentDefinition
 	xmlns="sap.m"
 	xmlns:c="sap.ui.core"
@@ -52,11 +53,15 @@
         <Title text="Total Price" class="sapUiTinyMargin"></Title>
         <Text text="{productitem>/totalprice}" class="sapUiTinyMargin"></Text>
         </HBox>
-
-
     
     </VBox>
-
+    <beginButton>
+        <Button text="Buy" press=".closedialog"></Button>
+    
+    </beginButton>
+    <endButton>
+        <Button text="Close" press=".closedialog"></Button>
+    </endButton>
 
 </Dialog>
 </c:FragmentDefinition>

@@ -1,35 +1,28 @@
-sap.ui.define([
-	"sap/ui/core/mvc/Controller"
-], function(
-	Controller
-) {
-	"use strict";
+sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
+  "use strict";
 
-	return Controller.extend("com.northwind.northwind.controller.Customers", {
+  return Controller.extend("com.northwind.northwind.controller.Customers", {
+    /**
+     * @override
+     */
+    onInit: function () {
+      const omodel = this.getOwnerComponent().getModel("northwind_json");
+      console.log(omodel, "omodel");
 
-        /**
-         * @override
-         */
-        onInit: function() {
-            
-            const omodel = this.getOwnerComponent().getModel("northwind_json");
-        console.log(omodel, "omodel");
+      omodel.read("/Customers", {
+        success: function (data) {
+          console.log(data, omodel.getProperty("/Customers(1)"), "ddd", "ppp");
+        },
 
-        omodel.read("/Customers", {
-          success: function (data) {
-            console.log(data, omodel.getProperty("/Customers(1)"), "ddd", "ppp");
-            
-          },
+        error: (err) => {
+          console.log(err, "err");
+        },
+      });
+    },
 
-          error: (err) => {
-            console.log(err, "err");
-          },
-        });
+    navtoq4:function(){
+      this.getOwnerComponent().getRouter().navTo("Products")
+    }
 
-
-            
-        
-        }
-
-	});
+  });
 });
