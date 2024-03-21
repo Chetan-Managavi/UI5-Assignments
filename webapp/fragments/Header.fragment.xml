@@ -1,0 +1,8 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+>
+
+<Button text="SignUp" press=".showsignupdialog"/>
+<Button text="Sales" press=".navtosales"></Button>
+</c:FragmentDefinition>

@@ -1,0 +1,52 @@
+<mvc:View
+	controllerName="com.northwind.northwind.controller.Sales"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+
+<Page title="Sales By Category">
+<Table items="{northwind_json>/Sales_by_Categories}">
+
+    <columns>
+    <Column >
+        <Text text=" Category ID"></Text>
+    </Column>
+
+    <Column >
+        <Text text="Category Name"></Text>
+    </Column>
+
+    <Column >
+        <Text text="Product Name"></Text>
+    </Column>
+
+    <Column >
+        <Text text="Product Sales"></Text>
+    </Column>
+    </columns>
+
+    <items>
+        <ColumnListItem  >
+            <cells>
+                <Text text="{northwind_json>CategoryID}" ></Text>
+                <Text text="{northwind_json>CategoryName}" ></Text>
+                <Text text="{northwind_json>ProductName}" ></Text>
+                <Text text="{northwind_json>ProductSales}" ></Text>
+            </cells>
+
+        </ColumnListItem>
+    </items>
+
+    
+
+
+</Table>
+
+</Page>
+
+
+</mvc:View>

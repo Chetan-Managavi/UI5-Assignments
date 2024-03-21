@@ -1,0 +1,36 @@
+<mvc:View
+	controllerName="com.northwind.northwind.controller.Products"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+<Page title="Northwind Products">
+
+	<headerContent>
+		<c:Fragment fragmentName="com.northwind.northwind.fragments.Header" />
+	</headerContent>
+
+	 <List items="{northwind_json>/Products}">
+
+            <ObjectListItem 
+                title="{northwind_json>ProductName}"
+                 number="{northwind_json>UnitPrice}"
+                 numberUnit="EUR" 
+                numberState="{ 'path': 'northwind_json>UnitPrice',
+								'formatter': '.formatter.fnshow' }"
+				type="Navigation"
+				press=".onproductitempress"
+				/>
+        </List>
+
+		
+    <footer>
+		<c:Fragment fragmentName="com.northwind.northwind.fragments.Footer" />
+	</footer>
+
+
+</Page>
+</mvc:View>

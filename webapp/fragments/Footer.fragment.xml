@@ -1,0 +1,16 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+>
+
+<OverflowToolbar >
+
+    <Button text="Home" icon="sap-icon://home"></Button>
+    <ToolbarSpacer ></ToolbarSpacer>
+    <Text text="Cherrywork is a registered trademark of Incture Technologies Private Limited."/>
+    <ToolbarSpacer ></ToolbarSpacer>
+    <Button text="Signout"  />
+
+</OverflowToolbar>
+
+</c:FragmentDefinition>
