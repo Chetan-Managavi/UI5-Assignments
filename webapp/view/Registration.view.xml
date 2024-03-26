@@ -1,0 +1,44 @@
+<mvc:View
+	controllerName="com.northwind.northwind.controller.Registration"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+
+<Page title="{i18n>registrationPageTitle} " titleAlignment="Center">
+
+    <headerContent>
+    <Label text="{i18n>LabelLanguageOptions}"></Label>
+        <Select  change=".onSelectLanguage">
+            <c:ListItem text="{i18n>EnglishOption}" key="en"></c:ListItem>
+            <c:ListItem text="{i18n>ArabicOption}" key="ar"></c:ListItem>
+            <c:ListItem text="{i18n>FrenchOption}" key="fr"></c:ListItem>
+        </Select>
+    </headerContent>
+    <VBox width="50%" class="empform">
+    
+        <Label text="{i18n>LabelName}" labelFor="idname"></Label>
+        <Input id="idname" value="{user>/name}"/>
+
+        <Label text="{i18n>LabelEmployeeId}" labelFor="idempid"></Label>
+        <Input id="idempid" value="{user>/empid}"/>
+    
+        <Label text="{i18n>LabelDesignation}" labelFor="iddesignation"></Label>
+        <Input id="iddesignation" value="{user>/designation}"/>
+
+        <Label text="{i18n>LabelPlace}" labelFor="idplace"></Label>
+        <Input id="idplace" value="{user>/place}"/>
+    
+        <Label text="{i18n>LabelDepartment}" labelFor="iddept"></Label>
+        <Input id="iddept" value="{user>/dept}"/>
+
+        <Button text="{i18n>submitBtnText}"></Button>
+    </VBox>
+
+    
+
+</Page>
+</mvc:View>
