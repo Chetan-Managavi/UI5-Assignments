@@ -1,0 +1,80 @@
+<mvc:View
+	controllerName="com.northwind.northwind.controller.Detail"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+
+<Page title="Employee Profile" titleAlignment="Center">
+
+	
+	<Panel headerText="Basic Info" class="sapUiLargeMargin">
+		<VBox >
+		<HBox >
+		<Title text="Name:" class="sapUiTinyMarginEnd" ></Title>
+		<Text text="{employee>Name}"></Text>
+		</HBox>
+		<HBox >
+		<Title text="Department:" class="sapUiTinyMarginEnd"></Title>
+		<Text text="{employee>Department}"></Text>
+		</HBox>
+		<HBox >
+		<Title text="Gender:" class="sapUiTinyMarginEnd"></Title>
+		<Text text="{employee>Gender}"></Text>
+		</HBox>
+		<HBox>
+		<Title text="Base Location:" class="sapUiTinyMarginEnd"></Title>
+		<Text text="{employee>BaseLocation}"></Text>
+		</HBox>
+			
+		</VBox>
+	</Panel>
+	<Panel headerText="Additional Details" class="sapUiLargeMargin">
+
+	<HBox justifyContent="SpaceAround">
+		<Panel headerText="Home Address">
+		<VBox
+		>
+			<!-- <Title text="Home Address"></Title> -->
+			<HBox >
+				<Title text="Flat No" class="sapUiTinyMarginEnd"></Title>
+				<Text text="{employee>Additional Details/Home Address/Flat No}"></Text>
+			</HBox>
+			<HBox >
+				<Title text="Street" class="sapUiTinyMarginEnd"></Title>
+				<Text text="{employee>Additional Details/Home Address/Street}"></Text>
+			</HBox>
+			
+			<HBox >
+				<Title text="City" class="sapUiTinyMarginEnd"></Title>
+				<Text text="{employee>Additional Details/Home Address/City}"></Text>
+			</HBox>
+		</VBox>
+		</Panel>
+		<VBox >
+			<Panel headerText="Emergency Contact">
+			
+			<HBox >
+				<Title text="Name" class="sapUiTinyMarginEnd"></Title>
+				<Text text="{employee>Additional Details/Emergency Contact/Name}"></Text>
+			</HBox>
+			<HBox >
+				<Title text="Number" class="sapUiTinyMarginEnd"></Title>
+				<Text text="{employee>Additional Details/Emergency Contact/Number}"></Text>
+			</HBox>
+			</Panel>
+		
+		</VBox>
+	
+	
+	
+	</HBox>
+
+	</Panel>
+
+</Page>
+
+</mvc:View>

@@ -1,0 +1,31 @@
+<mvc:View
+	controllerName="com.northwind.northwind.controller.List"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+<Page title="Employee List" titleAlignment="Center">
+    <List items="{employee>/}" >
+        <ObjectListItem 
+        title="{employee>Name}"
+		type="Navigation"
+		press=".navtodetail"
+		
+        >
+		
+			<ObjectAttribute title="Department" text="{employee>Department}"></ObjectAttribute>
+  			<ObjectAttribute title="Gender" text="{employee>Gender}"></ObjectAttribute>
+			<ObjectAttribute title="Base Location" text="{employee>BaseLocation}"></ObjectAttribute>
+
+		
+		</ObjectListItem>
+		
+    </List>
+
+
+</Page>
+
+</mvc:View>
