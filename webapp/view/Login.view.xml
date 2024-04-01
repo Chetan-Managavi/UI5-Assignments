@@ -1,0 +1,30 @@
+<mvc:View
+	controllerName="com.northwind.northwind.controller.Login"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+<Page title="Digital Store">
+
+    <Panel headerText="Login" width="50%" height="40%" class="login_container">
+        <VBox id="loginv"  >
+            <Label text="User Name" labelFor="idname" class='sapUiTinyMarginTop'></Label>
+            <Input id="idname" value="{user>/username}" class="sapUiTinyMarginBottom"></Input>
+            <Label text="Password" labelFor="idpassword" ></Label>
+            <Input type="Password" id="idpassword" value="{user>/password}" class="sapUiTinyMarginBottom" liveChange=".onPasswordInputLiveChange"></Input>
+            <HBox justifyContent="Center" width="100%" class="sapUiTinyMargin">
+                <Button text="Login" width="200px" press=".onLoginButtonPress" /> 
+            </HBox>
+            
+        </VBox>
+    
+    </Panel>
+
+</Page>
+
+
+
+</mvc:View>
