@@ -1,7 +1,8 @@
 .login_container{
-    /* background-color: white; */
+    background-color: white;
     margin:auto;
     margin-top:50px;
+    border-radius: 10px;
 }
 
 .menu-container{

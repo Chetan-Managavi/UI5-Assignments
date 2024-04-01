@@ -1,61 +1,97 @@
 <mvc:View
-	controllerName="com.northwind.northwind.controller.Main"
-	xmlns:mvc="sap.ui.core.mvc"
-	xmlns="sap.m"
-	xmlns:c="sap.ui.core"
-	displayBlock="true"
-	height="100%"
-	busyIndicatorDelay="0"
+    controllerName="com.northwind.northwind.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:c="sap.ui.core"
+    displayBlock="true"
+    height="100%"
+    busyIndicatorDelay="0"
+
 >
 
-<SplitContainer id="splitcont" >
+<Page  title="Shop-Zone"  >
 
-    <masterPages>
-        <Page title="Menu">
-
-            <VBox height="100%" class="menu-container" >
-            <List >
+    <headerContent>
+        <Text text="{user>/username}"></Text>
+        <Button text="Logout" press=".navtologout" ></Button>
+    </headerContent>
+    <SplitContainer id="splitcont">
+        <masterPages>
+            <Page title="Menu">
+                <VBox
+                    height="100%"
+                    class="menu-container"
+                >
+                    <List>
+                        <StandardListItem
+                            title="Home"
+                            type="Navigation"
+                            press=".navtohome"
+                            class="sapUiSmallMargin"
+                        />
+                        <StandardListItem
+                            title="Laptops"
+                            type="Navigation"
+                            press=".navtoproducts"
+                            class="sapUiSmallMargin"
+                        >
+                            <customData>
+                                <c:CustomData
+                                    key="category"
+                                    value="laptops"
+                                    writeToDom="false"
+                                />
+                            </customData>
+                        </StandardListItem>
+                        <StandardListItem
+                            title="Smartphone"
+                            type="Navigation"
+                            press=".navtoproducts"
+                            class="sapUiSmallMargin"
+                        >
+                            <customData>
+                                <c:CustomData
+                                    key="category"
+                                    value="smartphones"
+                                    writeToDom="false"
+                                />
+                            </customData>
+                        </StandardListItem>
+                        <StandardListItem
+                            title="Mens Watches"
+                            type="Navigation"
+                            press=".navtoproducts"
+                            class="sapUiSmallMargin"
+                        >
+                            <customData>
+                                <c:CustomData
+                                    key="category"
+                                    value="mens-watches"
+                                    writeToDom="false"
+                                />
+                            </customData>
+                        </StandardListItem>
+                        <StandardListItem
+                            title="Womens Watches"
+                            type="Navigation"
+                            press=".navtoproducts"
+                            class="sapUiSmallMargin"
+                        >
+                            <customData>
+                                <c:CustomData
+                                    key="category"
+                                    value="womens-watches"
+                                    writeToDom="false"
+                                />
+                            </customData>
+                        </StandardListItem>
+                    </List>
+                </VBox>
+            </Page>
+        </masterPages>
+        <detailPages>
             
-                <StandardListItem title="Home" type="Navigation" press=".navtohome" class="sapUiSmallMargin"></StandardListItem>
-                
-                <StandardListItem title="Products" type="Navigation" press=".navtoproducts" class="sapUiSmallMargin"></StandardListItem>
-                
-                <StandardListItem title="Cart" type="Navigation" press=".navtocart" class="sapUiSmallMargin"></StandardListItem>
-                
-                <StandardListItem title="About Us" type="Navigation" press=".navtoaboutus" class="sapUiSmallMargin"></StandardListItem>
-            </List>
-            </VBox>
-
-            
-
-        </Page>
-    
-    </masterPages>
-
-    <detailPages>
-     
-    
-
-        
-        <!-- <Page id="idHome" title="Home">
-        </Page>
-
-          
-        
-        <Page id="idProducts" title="Products">
-        </Page>
-
-        <Page id="idCart" title="Your Cart">
-        </Page> -->
-    
-    </detailPages>
-</SplitContainer>
-
-
-
-
-
-
-
-
+        </detailPages>
+    </SplitContainer>
+    </Page>
 </mvc:View>

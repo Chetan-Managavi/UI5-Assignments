@@ -1,0 +1,16 @@
+<mvc:View
+	controllerName="com.northwind.northwind.controller.ProductList"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+<Page title="Product Category: {products>/0/category}">
+
+    <List items="{products>/}">
+        <ObjectListItem title="{products>title}" icon="{products>thumbnail}" number="{products>price} $"></ObjectListItem>
+    </List>
+</Page>
+</mvc:View>

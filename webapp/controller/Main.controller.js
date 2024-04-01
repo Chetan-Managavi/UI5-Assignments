@@ -14,7 +14,27 @@ sap.ui.define([
             // const splitcont= this.getView().byId("idsplitcont")
             // splitcont.to(this.createId("idProducts"))
                         
-        }
+        },
+		navtoproducts:function(event){
+			console.log("navtop")
+
+			const router= this.getOwnerComponent().getRouter()
+			const category= event.getSource().data("category")
+			console.log(category)
+
+
+
+
+			router.navTo("ProductList",{
+				category:category
+			})
+
+		},
+		navtologout:function(){
+
+			this.getOwnerComponent().getRouter().navTo("Logout")
+
+		}
 
 
 	});

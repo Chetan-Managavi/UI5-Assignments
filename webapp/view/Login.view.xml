@@ -7,7 +7,7 @@
 	height="100%"
 	busyIndicatorDelay="0"
 >
-<Page title="Digital Store">
+<Page title="Shop-Zone">
 
     <Panel headerText="Login" width="50%" height="40%" class="login_container">
         <VBox id="loginv"  >

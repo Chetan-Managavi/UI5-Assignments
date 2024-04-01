@@ -1,0 +1,24 @@
+<mvc:View
+	controllerName="com.northwind.northwind.controller.Logout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+
+<Page title="Shop-Zone">
+
+    <VBox class="login_container" alignItems="Center"  width="30%" >
+        
+        <Title text="Succesfully Logged Out" class="sapUiSmallMargin"></Title>
+        <Button text="Login Back" press=".navtologin" class="sapUiSmallMargin"></Button>
+
+    </VBox>
+
+
+
+</Page>
+
+</mvc:View>

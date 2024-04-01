@@ -98,12 +98,22 @@
         {
           "name": "Main",
           "pattern": "Main",
-          "target":"Main"
+          "target":["Main","Home"]
         },
         {
           "name": "Home",
           "pattern": "Home",
           "target":["Main","Home"]
+        },
+        {
+          "name": "ProductList",
+          "pattern": "ProductList/{category}",
+          "target":["Main","ProductList"]
+        },
+        {
+          "name": "Logout",
+          "pattern": "Logout",
+          "target":"Logout"
         }
       ],
       "targets": {
@@ -128,6 +138,22 @@
           "controlId": "splitcont",
           "parent": "Main",
           "controlAggregation": "detailPages"
+        },
+        "ProductList":{
+
+          "viewId": "ProductList",
+          "viewName": "ProductList",
+          "viewType": "XML",
+          "controlId": "splitcont",
+          "parent": "Main",
+          "controlAggregation": "detailPages"
+        },
+        "Logout": {
+          "viewId": "Logout",
+          "viewName": "Logout",
+          "viewType": "XML",
+          "controlId": "app",
+          "controlAggregation": "pages"
         }
       }
     },

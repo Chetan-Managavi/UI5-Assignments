@@ -10,6 +10,6 @@
 
 <Page title="Home">
 
-<Title text="Welcome to Digital Store "></Title>
+<Title text="Hi, {user>/username} Welcome to Shop-Zone "></Title>
 </Page>
 </mvc:View>
