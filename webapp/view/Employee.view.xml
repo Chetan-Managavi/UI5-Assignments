@@ -1,0 +1,70 @@
+<mvc:View
+	controllerName="com.northwind.northwind.controller.Employee"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+<Page title="Northwind Employees">
+
+	<headerContent>
+		<Button text="Question 2" press=".navtoq2"></Button>
+	</headerContent>
+
+	<Table items="{northwind_json>/Employees}">
+		<columns>
+			
+			<Column ><Text text="Emplyoee Id"></Text></Column>
+			
+			<Column ><Text text="Name"></Text></Column>
+			
+			<Column ><Text text="Title"></Text></Column>
+			
+			<Column ><Text text="Birth Date"></Text></Column>
+			
+			<Column ><Text text="Hire Date"></Text></Column>
+			
+			<Column ><Text text="Home Phone"></Text></Column>
+			<Column ><Text text="Address"></Text></Column>
+			<Column ><Text text="City"></Text></Column>
+			<Column ><Text text="Region"></Text></Column>
+			<Column ><Text text="Postal Code"></Text></Column>
+			<Column ><Text text="Country"></Text></Column>
+			<Column ><Text text="Extension"></Text></Column>
+			<Column > <Text text="Reports To"></Text></Column>
+		
+		
+		</columns>
+		
+			<ColumnListItem 
+				
+			>
+				<cells>
+					<Text text="{northwind_json>EmployeeID}"></Text>
+					<Text text=" {northwind_json>TitleOfCourtesy} {northwind_json>FirstName} {northwind_json>LastName}"></Text>
+					<Text text="{northwind_json>Title}"></Text>
+					<Text text="{northwind_json>BirthDate}"></Text>
+					<Text text="{northwind_json>HireDate}"></Text>
+					<Text text="{northwind_json>HomePhone}"></Text>
+					<Text text="{northwind_json>Address}"></Text>
+					<Text text="{northwind_json>City}"></Text>
+					<Text text="{northwind_json>Region}"></Text>
+					<Text text="{northwind_json>PostalCode}"></Text>
+					<Text text="{northwind_json>Country}"></Text>
+					<Text text="{northwind_json>Extension}"></Text>	
+					<Text text="{northwind_json>ReportsTo}"></Text>
+					
+				</cells>
+			
+			</ColumnListItem>
+				
+	
+	</Table>
+
+	
+
+
+</Page>
+</mvc:View>

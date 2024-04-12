@@ -1,0 +1,37 @@
+<mvc:View
+	controllerName="com.northwind.northwind.controller.Customers"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+<Page title="Northwind Customers">
+
+    <headerContent>
+        <Button text="Question 3" press=".navtoq3"></Button>
+        
+    </headerContent>
+    <Label text="Search by Customer Id" labelFor="idsearch"></Label>
+    <SearchField id="idsearch" placeholder="Customer Id" search="onSearchCustomerId"></SearchField>
+
+    <List items="{customer>/display_data}"  >
+        <ObjectListItem title="{customer>CompanyName}" number="{customer>CustomerID}"  >
+            <ObjectAttribute title="{customer>ContactTitle}" text="{customer>ContactName}"></ObjectAttribute>
+            <ObjectAttribute title="Phone" text="{customer>Phone}"></ObjectAttribute>
+            <ObjectAttribute title="Address" text="{customer>Address}"></ObjectAttribute>
+            
+        </ObjectListItem>
+
+    
+    </List>
+    <footer>
+        <OverflowToolbar id="idpagination" >
+            <ToolbarSpacer ></ToolbarSpacer>
+        </OverflowToolbar>
+    </footer>
+
+
+</Page>
+</mvc:View>

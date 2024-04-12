@@ -1,0 +1,35 @@
+<mvc:View
+	controllerName="com.northwind.northwind.controller.Invoices"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+<Page title="Northwind Invoices">
+
+    <List items="{ 
+        'path': 'northwind_json>/Invoices',
+        'sorter': [{
+            'path': 'ShipperName',
+            'group': true
+        }]
+        
+
+     }"  growing="true" growingThreshold="100" growingScrollToLoad="true">
+
+        <ObjectListItem  intro="{northwind_json>OrderID}" title="{northind_json>ShipName}" number="{northwind_json>UnitPrice}">
+            
+            <ObjectAttribute  title="Shipper Name" text="{northwind_json>ShipperName}"></ObjectAttribute>
+            
+            <ObjectAttribute  title="Product Name" text="{northwind_json>ProductName}"></ObjectAttribute>
+
+        
+        </ObjectListItem>
+    
+    
+    </List>
+
+</Page>
+</mvc:View>
