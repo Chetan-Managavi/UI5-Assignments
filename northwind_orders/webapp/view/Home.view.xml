@@ -1,0 +1,15 @@
+<mvc:View controllerName="com.northwind.northwindorders.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <List items="{/Orders}">
+            <ObjectListItem title="{ShipName}" number="{OrderID}" >
+                <ObjectAttribute title="Order Date" text="{OrderDate}"></ObjectAttribute>
+                <ObjectAttribute title="Required Date" text="{RequiredDate}"></ObjectAttribute>
+                <ObjectAttribute title="Ship Address" text="{ShipAddress}"></ObjectAttribute>
+            </ObjectListItem>
+            
+
+        </List>
+    </Page>
+</mvc:View>
